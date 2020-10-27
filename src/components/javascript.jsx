@@ -1,8 +1,8 @@
-const JavaScript = () => {
+const JavaScript = ({ code }) => {
   return (
     <div className="field js-box">
       <div className="title">JavaScript</div>
-      <textarea className="input"></textarea>
+      <textarea className="input">{code}</textarea>
     </div>
   );
 };

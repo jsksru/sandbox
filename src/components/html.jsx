@@ -1,8 +1,8 @@
-const Html = () => {
+const Html = ({ code }) => {
   return (
     <div className="field html-box">
       <div className="title">HTML</div>
-      <textarea className="input"></textarea>
+  <textarea className="input">{code}</textarea>
     </div>
   );
 };

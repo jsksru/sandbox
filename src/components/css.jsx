@@ -1,8 +1,8 @@
-const Css = () => {
+const Css = ({ code }) => {
   return (
     <div className="field css-box">
       <div className="title">CSS</div>
-      <textarea className="input"></textarea>
+      <textarea className="input">{code}</textarea>
     </div>
   );
 };
