@@ -7,9 +7,9 @@ import './App.scss';
 
 const App = () => {
 
-  const [htmlCode, setHtmlCode] = useState('1');
-  const [cssCode, setCssCode] = useState('2');
-  const [jsCode, setJsCode] = useState('3');
+  const [htmlCode, setHtmlCode] = useState('');
+  const [cssCode, setCssCode] = useState('');
+  const [jsCode, setJsCode] = useState('');
 
   return (
     <div className="box">
