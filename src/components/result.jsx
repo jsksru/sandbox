@@ -1,7 +1,7 @@
-const Result = () => {
+const Result = ({ html }) => {
   return (
     <div className="field result-box">
-      Result
+      {html}
     </div>
   );
 };

@@ -1,8 +1,8 @@
-const Html = ({ code }) => {
+const Html = ({ code, handler }) => {
   return (
     <div className="field html-box">
       <div className="title">HTML</div>
-  <textarea className="input">{code}</textarea>
+      <textarea className="input" value={code} onChange={(e) => handler(e.target.value)}></textarea>
     </div>
   );
 };
