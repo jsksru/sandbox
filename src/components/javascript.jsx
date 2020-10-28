@@ -1,22 +1,24 @@
 import AceEditor from 'react-ace';
 
-import "ace-builds/src-noconflict/mode-javascript";
-import "ace-builds/src-noconflict/theme-monokai";
-import "ace-builds/src-noconflict/snippets/javascript";
 import "ace-builds/src-noconflict/ext-language_tools";
+import "ace-builds/src-noconflict/ext-emmet";
+import "ace-builds/src-noconflict/mode-javascript";
+import "ace-builds/src-noconflict/snippets/javascript";
+import "ace-builds/src-noconflict/theme-monokai";
 
 const JavaScript = ({ code, handler }) => {
   return (
     <div className="field js-box">
       <div className="title">JavaScript</div>
       <AceEditor
+        theme="monokai"
+        mode="javascript"
         className="input"
-        name="htmlcodebox"
+        name="jscodebox"
         value={code}
         onChange={(value) => handler(value)}
-        editorProps={{
-          theme: 'monokai',
-          mode: 'javascript',
+        editorProps={{ $blockScrolling: true }}
+        setOptions={{
           enableBasicAutocompletion: true,
           enableLiveAutocompletion: true,
           enableSnippets: true,
