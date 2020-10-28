@@ -2,6 +2,8 @@ import AceEditor from 'react-ace';
 
 import "ace-builds/src-noconflict/mode-html";
 import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-noconflict/snippets/html";
+import "ace-builds/src-noconflict/ext-language_tools";
 
 const Html = ({ code, handler }) => {
   return (
@@ -9,21 +11,21 @@ const Html = ({ code, handler }) => {
       <div className="title">HTML</div>
       <AceEditor
         className="input"
+        name="htmlcodebox"
         value={code}
         onChange={(value) => handler(value)}
-        mode="html"
-        theme="monokai"
-        fontSize={16}
-        showGutter={true}
-        highlightActiveLine={true}
-        name="htmlcodebox"
         editorProps={{ $blockScrolling: true }}
         setOptions={{
+          theme: 'monokai',
+          mode: 'html',
           enableBasicAutocompletion: true,
           enableLiveAutocompletion: true,
-          enableSnippets: false,
+          enableSnippets: true,
           showLineNumbers: true,
-          tabSize: 2,
+          showGutter: true,
+          highlightActiveLine: true,
+          fontSize: 16,
+          tabSize: 2
         }}
       />
     </div>
